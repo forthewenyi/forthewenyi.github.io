@@ -58,19 +58,22 @@
             padding: 2rem 2rem 2rem;
         }
 
-        .hero-banner {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto 4rem;
-            padding: 0 2rem;
+        .screenshot-small {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero-banner img {
+        .screenshot-small img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
         }
 
         .project-type {
@@ -279,9 +282,17 @@
         </div>
     </section>
 
-    <div class="hero-banner">
-        <img src="images/careerfit-chrome.png" alt="CareerFit AI Chrome Extension - AI-powered job search analysis">
-    </div>
+    <section class="content-section">
+        <h2>Extension Overview</h2>
+
+        <div class="screenshot-small">
+            <img src="images/careerfit-chrome.png" alt="CareerFit AI Chrome Extension">
+            <div class="screenshot-caption">
+                <h3>Chrome Extension Integration</h3>
+                <p>CareerFit AI seamlessly integrates into your job search workflow as a Chrome extension. Install it once and get intelligent job analysis on every job posting you visit across LinkedIn, Indeed, and other job boards.</p>
+            </div>
+        </div>
+    </section>
 
     <section class="content-section">
         <h2>Core Features</h2>
