@@ -67,6 +67,19 @@
             color: var(--accent);
         }
 
+        nav .cta-button {
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 100px;
+            font-weight: 500;
+        }
+
+        nav .cta-button:hover {
+            opacity: 0.85;
+            color: white;
+        }
+
         /* Hero */
         .hero {
             max-width: 1200px;
@@ -483,6 +496,11 @@
                 text-align: center;
             }
 
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
             .about-content {
                 grid-template-columns: 1fr;
             }
@@ -510,7 +528,7 @@
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact" class="cta-button">Let's connect</a>
         </nav>
     </header>
 
