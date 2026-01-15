@@ -9,10 +9,16 @@
         :root {
             --bg: #FDFCFA;
             --text: #1a1a1a;
-            --text-secondary: #5a5a5a;
-            --accent: #2D5A4A;
-            --accent-light: #E8F0ED;
-            --border: #e5e5e5;
+            --text-secondary: #708995;
+            --accent: #9DC3B5;
+            --accent-dark: #7A9D91;
+            --accent-light: #E8F5F1;
+            --healing-yellow: #F0D58C;
+            --circular-grey: #708995;
+            --creamy-white: #F5F3E7;
+            --elemental-blue: #9FA8DA;
+            --ice-blue: #C5D9E8;
+            --border: #E8E8E8;
             --card-bg: #ffffff;
         }
 
@@ -141,19 +147,20 @@
             border: 1px solid var(--border);
             border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
         .project-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 12px 40px rgba(157, 195, 181, 0.25);
+            border-color: var(--accent);
         }
 
         .project-image {
             width: 100%;
             height: 220px;
             object-fit: cover;
-            background: linear-gradient(135deg, var(--accent-light) 0%, #f5f5f5 100%);
+            background: linear-gradient(135deg, var(--ice-blue) 0%, var(--creamy-white) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -216,11 +223,12 @@
         }
 
         .tech-tag {
-            background: #f5f5f5;
-            color: var(--text-secondary);
+            background: var(--creamy-white);
+            color: var(--circular-grey);
             padding: 0.35rem 0.75rem;
             border-radius: 6px;
             font-size: 0.8rem;
+            border: 1px solid #E8E0D5;
         }
 
         .project-links {
@@ -322,19 +330,20 @@
 
         .stat {
             padding: 1.25rem;
-            background: var(--accent-light);
+            background: var(--healing-yellow);
             border-radius: 8px;
+            border: 1px solid #E8D08C;
         }
 
         .stat-number {
             font-family: 'DM Serif Display', serif;
             font-size: 2rem;
-            color: var(--accent);
+            color: var(--accent-dark);
         }
 
         .stat-label {
             font-size: 0.85rem;
-            color: var(--text-secondary);
+            color: var(--circular-grey);
         }
 
         .experience-list {
@@ -408,17 +417,18 @@
         }
 
         .cert-badge {
-            background: var(--bg);
-            border: 1px solid var(--border);
+            background: var(--ice-blue);
+            border: 1px solid #B5CDDF;
             padding: 0.5rem 1rem;
             border-radius: 6px;
             font-size: 0.85rem;
             font-weight: 500;
+            color: var(--accent-dark);
         }
 
         /* Contact Section */
         .contact {
-            background: var(--accent);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--elemental-blue) 100%);
             color: white;
             padding: 4rem 2rem;
             margin-top: 4rem;
