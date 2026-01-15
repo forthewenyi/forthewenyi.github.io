@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenny Gem Finder | Wenyi Chen</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FDFCFA;
+            --text: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --accent: #2a5a4a;
+            --accent-soft: #9DC3B5;
+            --accent-light: #E8F5F1;
+            --healing-yellow: #F0D58C;
+            --creamy-white: #F5F3E7;
+            --border: #E8E8E8;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        .project-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+
+        .project-type {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-intro {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-link {
+            color: white;
+            background: var(--accent);
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.2s;
+        }
+
+        .project-link:hover {
+            opacity: 0.85;
+        }
+
+        .project-link.secondary {
+            background: white;
+            color: var(--accent);
+            border: 1px solid var(--border);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: var(--creamy-white);
+            color: var(--text-secondary);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            border: 1px solid #E8E0D5;
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+        }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-soft);
+        }
+
+        .screenshot {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screenshot-caption {
+            padding: 1.5rem;
+            background: var(--card-bg);
+        }
+
+        .screenshot-caption h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .screenshot-caption p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--accent);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            border-top: 4px solid var(--accent-soft);
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .project-links {
+                flex-direction: column;
+            }
+
+            .project-link {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+    </header>
+
+    <section class="project-header">
+        <span class="project-type">AI Product | Founder</span>
+        <h1>Kenny Gem Finder</h1>
+        <p class="project-intro">
+            AI-powered product recommendation platform that helps consumers identify quality products based on durability and total cost of ownership—not marketing hype.
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/forthewenyi/kenny_gem_product_finder" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+            </a>
+        </div>
+        <div class="tech-stack">
+            <span class="tech-tag">Google ADK</span>
+            <span class="tech-tag">Gemini 2.5</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">Python</span>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Product Demo</h2>
+
+        <div class="screenshot">
+            <img src="images/kenny-1.png" alt="Kenny Gem Finder search results showing product recommendations">
+            <div class="screenshot-caption">
+                <h3>AI-Powered Search Results</h3>
+                <p>Kenny analyzes 100+ sources including Reddit discussions, expert reviews, and user reports to surface quality products. Results are organized into Good/Better/Best value tiers, helping users make informed decisions based on durability and total cost of ownership rather than marketing hype.</p>
+            </div>
+        </div>
+
+        <div class="screenshot">
+            <img src="images/kenny-2.png" alt="Kenny Gem Finder detailed product analysis">
+            <div class="screenshot-caption">
+                <h3>Value-Based Recommendations</h3>
+                <p>Each product recommendation includes cost-per-year analysis, durability ratings, and real user feedback. The platform cuts through marketing noise to show actual product longevity and value, helping consumers avoid planned obsolescence and save money long-term.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Multi-Agent Research Pipeline</h3>
+                <p>Agentic architecture coordinates multiple AI agents to gather comprehensive product data from diverse sources, ensuring thorough and unbiased analysis.</p>
+            </div>
+            <div class="feature-card">
+                <h3>100+ Sources Per Search</h3>
+                <p>Analyzes Reddit discussions, expert reviews, user reports, and more to provide a complete picture of product quality and longevity.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Good/Better/Best Tiers</h3>
+                <p>Uses value-based pricing framework to categorize products, making it easy to find the right quality level for your budget and needs.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Cost-Per-Year Analysis</h3>
+                <p>Shows total cost of ownership over time, not just sticker price, revealing which products offer true long-term value.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>The Problem</h2>
+        <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; max-width: 800px;">
+            Consumers waste billions on low-quality products that fail prematurely due to planned obsolescence. Traditional product search prioritizes paid ads and marketing over genuine quality. Kenny Gem Finder solves this by analyzing real user experiences and durability data to surface products that last, helping consumers make sustainable purchasing decisions and save money long-term.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Wenyi Chen | <a href="index.html">Back to Portfolio</a></p>
+    </footer>
+</body>
+</html>
