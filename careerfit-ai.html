@@ -58,22 +58,45 @@
             padding: 2rem 2rem 2rem;
         }
 
+        .overview-layout {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .overview-text h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .overview-text p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
         .screenshot-small {
             background: white;
             border: 1px solid var(--border);
             border-radius: 12px;
             overflow: hidden;
-            margin-bottom: 2rem;
             box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .screenshot-small img {
             width: 100%;
             height: auto;
             display: block;
+        }
+
+        @media (max-width: 900px) {
+            .overview-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
 
         .project-type {
@@ -285,11 +308,13 @@
     <section class="content-section">
         <h2>Extension Overview</h2>
 
-        <div class="screenshot-small">
-            <img src="images/careerfit-chrome.png" alt="CareerFit AI Chrome Extension">
-            <div class="screenshot-caption">
+        <div class="overview-layout">
+            <div class="overview-text">
                 <h3>Chrome Extension Integration</h3>
                 <p>CareerFit AI seamlessly integrates into your job search workflow as a Chrome extension. Install it once and get intelligent job analysis on every job posting you visit across LinkedIn, Indeed, and other job boards.</p>
+            </div>
+            <div class="screenshot-small">
+                <img src="images/careerfit-chrome.png" alt="CareerFit AI Chrome Extension">
             </div>
         </div>
     </section>
