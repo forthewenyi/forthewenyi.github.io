@@ -168,6 +168,19 @@
             line-height: 1.6;
         }
 
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -282,31 +295,34 @@
             </div>
         </div>
 
-        <div class="screenshot">
-            <img src="images/careerfit-assessment2.png" alt="Gap detection and recommendations">
-            <div class="screenshot-caption">
-                <h3>Smart Gap Detection</h3>
-                <p>Discover exactly what skills or experience you're missing for each role. The AI provides specific, actionable recommendations with learning resources to help you bridge the gap and become a stronger candidate.</p>
-            </div>
-        </div>
     </section>
 
     <section class="content-section">
-        <h2>Job Tracking & Learning</h2>
+        <h2>Smart Analysis & Tracking</h2>
 
-        <div class="screenshot">
-            <img src="images/careerfit-history.png" alt="Job tracking dashboard">
-            <div class="screenshot-caption">
-                <h3>5-Tab Job Dashboard</h3>
-                <p>Track your entire job search in one place with tabs for All Jobs, Interested, Applied, To Learn, and Learned. Easily move jobs through your pipeline and keep your applications organized.</p>
+        <div class="screenshot-grid">
+            <div class="screenshot">
+                <img src="images/careerfit-assessment2.png" alt="Gap detection and recommendations">
+                <div class="screenshot-caption">
+                    <h3>Smart Gap Detection</h3>
+                    <p>Discover exactly what skills or experience you're missing for each role. The AI provides specific, actionable recommendations with learning resources to help you bridge the gap and become a stronger candidate.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="screenshot">
-            <img src="images/careerfit-skills.png" alt="Skills learning tracker">
-            <div class="screenshot-caption">
-                <h3>Skills Learning Tracker</h3>
-                <p>Save skills you need to learn from job assessments. Track your progress with recommended resources, add keywords to your resume, and mark skills as learned when you've acquired them—turning job rejections into learning opportunities.</p>
+            <div class="screenshot">
+                <img src="images/careerfit-history.png" alt="Job tracking dashboard">
+                <div class="screenshot-caption">
+                    <h3>5-Tab Job Dashboard</h3>
+                    <p>Track your entire job search in one place with tabs for All Jobs, Interested, Applied, To Learn, and Learned. Easily move jobs through your pipeline and keep your applications organized.</p>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <img src="images/careerfit-skills.png" alt="Skills learning tracker">
+                <div class="screenshot-caption">
+                    <h3>Skills Learning Tracker</h3>
+                    <p>Save skills you need to learn from job assessments. Track your progress with recommended resources, add keywords to your resume, and mark skills as learned when you've acquired them—turning job rejections into learning opportunities.</p>
+                </div>
             </div>
         </div>
     </section>
