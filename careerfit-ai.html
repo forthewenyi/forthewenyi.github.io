@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerFit AI | Wenyi Chen</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FDFCFA;
+            --text: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --accent: #2a5a4a;
+            --accent-soft: #9DC3B5;
+            --accent-light: #E8F5F1;
+            --healing-yellow: #F0D58C;
+            --creamy-white: #F5F3E7;
+            --border: #E8E8E8;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        .project-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+
+        .project-type {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-intro {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-link {
+            color: white;
+            background: var(--accent);
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.2s;
+        }
+
+        .project-link:hover {
+            opacity: 0.85;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: var(--creamy-white);
+            color: var(--text-secondary);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            border: 1px solid #E8E0D5;
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+        }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-soft);
+        }
+
+        .screenshot {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screenshot-caption {
+            padding: 1.5rem;
+            background: var(--card-bg);
+        }
+
+        .screenshot-caption h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .screenshot-caption p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--accent);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            border-top: 4px solid var(--accent-soft);
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .project-links {
+                flex-direction: column;
+            }
+
+            .project-link {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+    </header>
+
+    <section class="project-header">
+        <span class="project-type">Chrome Extension | Founder</span>
+        <h1>CareerFit AI</h1>
+        <p class="project-intro">
+            Chrome extension that helps job seekers evaluate job fit using AI, providing intelligent analysis and automation for the job search process.
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/forthewenyi/Career-fit" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+            </a>
+        </div>
+        <div class="tech-stack">
+            <span class="tech-tag">Chrome Extension</span>
+            <span class="tech-tag">Gemini 2.5 Flash</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Zod</span>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Extension Overview</h2>
+
+        <div class="screenshot">
+            <img src="images/careerfit-chrome.png" alt="CareerFit AI Chrome Extension">
+            <div class="screenshot-caption">
+                <h3>Chrome Extension Integration</h3>
+                <p>CareerFit AI seamlessly integrates into your job search workflow as a Chrome extension. Install it once and get intelligent job analysis on every job posting you visit across LinkedIn, Indeed, and other job boards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Core Features</h2>
+
+        <div class="screenshot">
+            <img src="images/careerfit-buttons.png" alt="CareerFit AI button bar">
+            <div class="screenshot-caption">
+                <h3>Quick Action Buttons</h3>
+                <p>Access key features directly from any job posting with a draggable button bar. Get job summaries, assess fit scores, auto-fill applications, and track your job search—all without leaving the page.</p>
+            </div>
+        </div>
+
+        <div class="screenshot">
+            <img src="images/careerfit-assessment.png" alt="AI job fit assessment">
+            <div class="screenshot-caption">
+                <h3>AI-Powered Job Scoring</h3>
+                <p>Get instant fit scores (1-5 scale) for any job posting. CareerFit AI analyzes the job description against your resume to identify how well you match, highlighting your strengths and any potential gaps.</p>
+            </div>
+        </div>
+
+        <div class="screenshot">
+            <img src="images/careerfit-assessment2.png" alt="Gap detection and recommendations">
+            <div class="screenshot-caption">
+                <h3>Smart Gap Detection</h3>
+                <p>Discover exactly what skills or experience you're missing for each role. The AI provides specific, actionable recommendations with learning resources to help you bridge the gap and become a stronger candidate.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Job Tracking & Learning</h2>
+
+        <div class="screenshot">
+            <img src="images/careerfit-history.png" alt="Job tracking dashboard">
+            <div class="screenshot-caption">
+                <h3>5-Tab Job Dashboard</h3>
+                <p>Track your entire job search in one place with tabs for All Jobs, Interested, Applied, To Learn, and Learned. Easily move jobs through your pipeline and keep your applications organized.</p>
+            </div>
+        </div>
+
+        <div class="screenshot">
+            <img src="images/careerfit-skills.png" alt="Skills learning tracker">
+            <div class="screenshot-caption">
+                <h3>Skills Learning Tracker</h3>
+                <p>Save skills you need to learn from job assessments. Track your progress with recommended resources, add keywords to your resume, and mark skills as learned when you've acquired them—turning job rejections into learning opportunities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>AI Job Scoring (1-5 Scale)</h3>
+                <p>Instant fit analysis comparing your resume to job requirements, with color-coded scores to quickly identify your best opportunities.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Gap Detection & Resources</h3>
+                <p>Identify missing skills with smart recommendations and curated learning resources to help you become a stronger candidate.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Application Auto-Fill</h3>
+                <p>Automatically fills common ATS questions on Workday, Greenhouse, and Lever platforms, saving hours of repetitive data entry.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Resume Bullet Matching</h3>
+                <p>Get AI suggestions on which resume bullets to highlight for each specific job, showing how your experience aligns with role requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>The Problem</h2>
+        <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; max-width: 800px;">
+            Job seekers waste countless hours applying to positions where they're not a good fit, leading to rejection fatigue and missed opportunities. Traditional job search tools don't provide personalized fit analysis or help candidates understand what skills they need to develop. CareerFit AI solves this by providing instant, AI-powered job fit scores, identifying skill gaps, and tracking learning progress—turning every job search into a strategic career development opportunity.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Wenyi Chen | <a href="index.html">Back to Portfolio</a></p>
+    </footer>
+</body>
+</html>
