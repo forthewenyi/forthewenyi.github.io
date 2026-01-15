@@ -455,22 +455,35 @@
         .contact-content {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
+            text-align: center;
         }
 
         .contact h2 {
             font-family: 'DM Serif Display', serif;
             font-size: 2rem;
             font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-name {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-email {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
         }
 
         .contact-links {
             display: flex;
             gap: 1.5rem;
+            justify-content: center;
         }
 
         .contact-link {
@@ -505,9 +518,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .contact-content {
-                flex-direction: column;
-                text-align: center;
+            .contact-links {
+                flex-wrap: wrap;
             }
 
             .projects-grid {
@@ -765,6 +777,10 @@
     <section class="contact" id="contact">
         <div class="contact-content">
             <h2>Let's connect</h2>
+            <div class="contact-info">
+                <div class="contact-name">Wenyi Chen</div>
+                <div class="contact-email">letsemailwenyichen@gmail.com</div>
+            </div>
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/thewenyichen/" class="contact-link">LinkedIn</a>
                 <a href="https://github.com/forthewenyi" class="contact-link">GitHub</a>
